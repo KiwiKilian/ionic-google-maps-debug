@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import {GoogleMap, GoogleMapOptions, GoogleMaps, GoogleMapsEvent, Marker} from "@ionic-native/google-maps";
+import {Component} from '@angular/core';
+import {GoogleMap, GoogleMapOptions, GoogleMaps, GoogleMapsEvent, ILatLng, Marker} from "@ionic-native/google-maps";
+import {Platform} from "ionic-angular";
 
 @Component({
     selector: 'page-home',
@@ -7,38 +8,57 @@ import {GoogleMap, GoogleMapOptions, GoogleMaps, GoogleMapsEvent, Marker} from "
 })
 export class HomePage {
     map: GoogleMap;
-    constructor() { }
+
+    constructor(public platform: Platform) {
+    }
 
     ionViewDidLoad() {
-        this.loadMap();
+        this.platform.ready().then(() => {
+            this.loadMap();
+        });
     }
 
     loadMap() {
+        const position: ILatLng = {
+            lat: 50,
+            lng: 10,
+        };
 
-        let mapOptions: GoogleMapOptions = {
+        const mapOptions: GoogleMapOptions = {
             camera: {
-                target: {
-                    lat: 43.0741904,
-                    lng: -89.3809802
-                },
+                target: position,
                 zoom: 18,
-                tilt: 30
             }
         };
 
         this.map = GoogleMaps.create('map_canvas', mapOptions);
 
-        let marker: Marker = this.map.addMarkerSync({
-            title: 'Ionic',
+
+        this.map.addMarkerSync({
+            title: 'Actual Position',
             icon: 'blue',
-            animation: 'DROP',
-            position: {
-                lat: 43.0741904,
-                lng: -89.3809802
-            }
+            position,
         });
-        // marker.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
-        //     alert('clicked');
-        // });
+
+        this.map.addMarkerSync({
+            title: 'Right Anchor Position',
+            icon: {
+                url: './assets/imgs/arrow-green.png',
+                // Anchor also accepts: [0, 0]
+                anchor: {x: 0, y: 0},
+            },
+            position,
+
+        });
+
+        this.map.addMarkerSync({
+            title: 'False Anchor Position',
+            icon: {
+                url: './assets/imgs/arrow-red.png',
+            },
+            position,
+            // Will only accept number[]
+            anchor: [0, 0],
+        });
     }
 }
