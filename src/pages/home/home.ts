@@ -1,7 +1,8 @@
 import {Component} from '@angular/core';
-import {GoogleMap, GoogleMapOptions, GoogleMaps, GoogleMapsEvent, ILatLng, Marker} from "@ionic-native/google-maps";
-import {Platform} from "ionic-angular";
+import {GoogleMap, GoogleMapOptions, GoogleMaps, ILatLng} from "@ionic-native/google-maps";
+import {IonicPage, Platform} from "ionic-angular";
 
+@IonicPage()
 @Component({
     selector: 'page-home',
     templateUrl: 'home.html'
