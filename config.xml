@@ -3,7 +3,7 @@
     <name>ionic-google-maps-debug</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
-    <content original-src="index.html" src="http://192.168.9.191:8100" />
+    <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -90,7 +90,6 @@
         <variable name="LOCATION_WHEN_IN_USE_DESCRIPTION" value="This app wants to get your location while this app runs only." />
         <variable name="LOCATION_ALWAYS_USAGE_DESCRIPTION" value="This app wants to get your location always, even this app runs in background." />
     </plugin>
-    <allow-navigation href="http://192.168.9.191:8100" sessionid="71528adb" />
     <engine name="ios" spec="4.5.5" />
     <engine name="android" spec="7.1.1" />
 </widget>
