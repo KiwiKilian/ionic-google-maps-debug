@@ -3,7 +3,7 @@
     <name>ionic-google-maps-debug</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
-    <content src="index.html" />
+    <content original-src="index.html" src="http://192.168.9.191:8100" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -79,10 +79,10 @@
     <plugin name="cordova-plugin-whitelist" spec="1.3.3" />
     <plugin name="cordova-plugin-device" spec="2.0.2" />
     <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
-    <plugin name="cordova-plugin-ionic-webview" spec="1.2.1" />
+    <plugin name="cordova-plugin-ionic-webview" spec="2.1.0" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="2.1.2" />
     <plugin name="cordova-plugin-statusbar" spec="2.4.2" />
-    <plugin name="cordova-plugin-googlemaps" spec="2.3.8">
+    <plugin name="cordova-plugin-googlemaps" spec="2.4.1">
         <variable name="API_KEY_FOR_ANDROID" value="AIzaSyCoqHk1eM3W64W3E0PDAF5Ujr48mDH80bQ" />
         <variable name="API_KEY_FOR_IOS" value="AIzaSyCoqHk1eM3W64W3E0PDAF5Ujr48mDH80bQ" />
         <variable name="PLAY_SERVICES_VERSION" value="15.0.1" />
@@ -90,6 +90,7 @@
         <variable name="LOCATION_WHEN_IN_USE_DESCRIPTION" value="This app wants to get your location while this app runs only." />
         <variable name="LOCATION_ALWAYS_USAGE_DESCRIPTION" value="This app wants to get your location always, even this app runs in background." />
     </plugin>
-    <engine name="android" spec="7.0.0" />
-    <engine name="ios" spec="4.5.4" />
+    <allow-navigation href="http://192.168.9.191:8100" sessionid="71528adb" />
+    <engine name="ios" spec="4.5.5" />
+    <engine name="android" spec="7.1.1" />
 </widget>
