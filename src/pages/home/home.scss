@@ -1,3 +1,20 @@
 page-home {
+  #map_canvas {
+    width: 100%;
+    height: calc(100% - 36px);
+  }
 
+  .click-demo {
+    display: block;
+    height: 18px;
+    color: white;
+
+    &--green {
+      background-color: green;
+    }
+
+    &--red {
+      background-color: red;
+    }
+  }
 }

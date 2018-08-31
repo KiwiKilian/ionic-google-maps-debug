@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {GoogleMap, GoogleMapOptions, GoogleMaps, ILatLng} from "@ionic-native/google-maps";
-import {IonicPage, Platform} from "ionic-angular";
+import {AlertController, IonicPage, Platform} from "ionic-angular";
 
 @IonicPage()
 @Component({
@@ -10,7 +10,10 @@ import {IonicPage, Platform} from "ionic-angular";
 export class HomePage {
     map: GoogleMap;
 
-    constructor(public platform: Platform) {
+    constructor(
+        public platform: Platform,
+        public alertController: AlertController,
+    ) {
     }
 
     ionViewDidLoad() {
@@ -61,5 +64,13 @@ export class HomePage {
             // Will only accept number[]
             anchor: [0, 0],
         });
+    }
+
+    clickDemo(title: string) {
+        console.log('Click success!');
+        this.alertController.create({
+            title,
+            buttons: ['OK'],
+        }).present();
     }
 }
