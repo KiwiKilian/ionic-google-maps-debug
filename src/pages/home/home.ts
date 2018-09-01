@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {GoogleMap, GoogleMapOptions, GoogleMaps, ILatLng} from "@ionic-native/google-maps";
-import {AlertController, IonicPage, Platform} from "ionic-angular";
+import {IonicPage, Platform} from "ionic-angular";
 
 @IonicPage()
 @Component({
@@ -9,10 +9,11 @@ import {AlertController, IonicPage, Platform} from "ionic-angular";
 })
 export class HomePage {
     map: GoogleMap;
+    upper: number = 0;
+    lower: number = 0;
 
     constructor(
         public platform: Platform,
-        public alertController: AlertController,
     ) {
     }
 
@@ -66,11 +67,11 @@ export class HomePage {
         });
     }
 
-    clickDemo(title: string) {
-        console.log('Click success!');
-        this.alertController.create({
-            title,
-            buttons: ['OK'],
-        }).present();
+    increaseUpper() {
+        this.upper += 1;
+    }
+
+    increaseLower() {
+        this.lower += 1;
     }
 }

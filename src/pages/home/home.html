@@ -8,6 +8,6 @@
 
 <ion-content>
     <div id="map_canvas"></div>
-    <div (click)="clickDemo('Upper')" tappable class="click-demo click-demo--green"><strong>Upper:</strong> This is clickable on iOS</div>
-    <div (click)="clickDemo('Lower')" tappable class="click-demo click-demo--red"><strong>Lower:</strong> This is <strong>not</strong> clickable on iOS</div>
+    <div (click)="increaseUpper()" tappable class="click-demo click-demo--green"><strong>Upper:</strong> This is clickable on iOS: <strong [innerHtml]="upper"></strong></div>
+    <div (click)="increaseLower()" tappable class="click-demo click-demo--red"><strong>Lower:</strong> This is <strong>not</strong> clickable on iOS: <strong [innerHtml]="lower"></strong></div>
 </ion-content>
