@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.ionic.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>ionic-google-maps-debug</name>
+    <name>Google Maps Debug</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
     <content src="index.html" />
@@ -82,7 +82,7 @@
     <plugin name="cordova-plugin-ionic-webview" spec="2.1.0" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="2.1.2" />
     <plugin name="cordova-plugin-statusbar" spec="2.4.2" />
-    <plugin name="cordova-plugin-googlemaps" spec="2.4.1">
+    <plugin name="cordova-plugin-googlemaps" spec="2.2.1">
         <variable name="API_KEY_FOR_ANDROID" value="AIzaSyCoqHk1eM3W64W3E0PDAF5Ujr48mDH80bQ" />
         <variable name="API_KEY_FOR_IOS" value="AIzaSyCoqHk1eM3W64W3E0PDAF5Ujr48mDH80bQ" />
         <variable name="PLAY_SERVICES_VERSION" value="15.0.1" />
